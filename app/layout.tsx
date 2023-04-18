@@ -6,6 +6,7 @@ import ToasterProvider from "./components/providers/ToasterProvider";
 import LoginModal from "./components/modal/LoginModal";
 import getCurrentUser from "./actions/getCurrentUser";
 import ClientOnly from "./components/ClientOnly";
+import RentModal from "./components/modal/RentModal";
 
 export const metadata = {
   title: "airbnb",
@@ -20,12 +21,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="en">
       <body className={font.className}>
-        {/* <ClientOnly> */}
-        <ToasterProvider />
-        <RegisterModal />
-        <LoginModal />
-        <Navbar currentUser={currentUser} />
-        {/* </ClientOnly> */}
+        <ClientOnly>
+          <ToasterProvider />
+          <RegisterModal />
+          <LoginModal />
+          <RentModal />
+          <Navbar currentUser={currentUser} />
+        </ClientOnly>
         {children}
       </body>
     </html>
