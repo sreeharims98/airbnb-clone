@@ -10,12 +10,12 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 
 interface PropertiesClientProps {
-  lisitngs: SafeListing[];
+  listings: SafeListing[];
   currentUser?: SafeUser | null;
 }
 
 export default function PropertiesClient({
-  lisitngs,
+  listings,
   currentUser,
 }: PropertiesClientProps) {
   const router = useRouter();
@@ -57,7 +57,7 @@ export default function PropertiesClient({
           gap-8
         "
       >
-        {lisitngs.map((lisitng: any) => (
+        {listings.map((lisitng: any) => (
           <ListingCard
             key={lisitng.id}
             data={lisitng}

@@ -30,7 +30,7 @@ export default async function PropertiesPage() {
 
   return (
     <ClientOnly>
-      <PropertiesClient lisitngs={listings} currentUser={currentUser} />
+      <PropertiesClient listings={listings} currentUser={currentUser} />
     </ClientOnly>
   );
 }
